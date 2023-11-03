@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyCircleProgress">
+        <!--        背景圆宽度-->
+        <attr name="bgCircleWidth" format="dimension" />
+        <attr name="bgCircleColor" format="color" />
+        <attr name="circleWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="valueTextColor" format="color" />
+        <attr name="valueTextSize" format="dimension" />
+        <attr name="messageTextColor" format="color" />
+        <attr name="messageTextSize" format="dimension" />
+        <attr name="unit" format="string"/>
+
+    </declare-styleable>
+</resources>
