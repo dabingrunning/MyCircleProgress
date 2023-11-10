@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DBCircleProgress</string>
+    <string name="update_progress">更新进度条</string>
 </resources>

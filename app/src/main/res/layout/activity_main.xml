@@ -9,14 +9,33 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="更新进度条"
+        android:text="@string/update_progress"
         android:textSize="14sp"
-        android:textColor="@color/white"
-        android:background="@color/blue_54A7FB"/>
+        android:textColor="@color/black"
+        android:background="@color/blue_71B4F8"/>
+
     <com.up.dbcircleprogress.view.MyCircleProgress
-        android:layout_width="300dp"
+        android:id="@+id/my_progress"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
+        app:bgPaintColor="@color/blue_C7E1FB"
+        app:progressColor="@color/blue_71B4F8"
+        app:valueTextColor="@color/blue_71B4F8"
+        app:bgPaintWidth="25dp"
+        app:progressWidth="25dp"
+        app:percent="10"
+        app:valueTextSize="16sp"
+        app:unit="%"
+        app:message="出勤率"
         app:layout_constraintTop_toBottomOf="@id/button_up"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
+    <com.up.dbcircleprogress.view.MyLineProgressBar
+        android:id="@+id/line_progress"
+        app:layout_constraintTop_toBottomOf="@id/my_progress"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:zBarHeight="20dp"
+        app:zRemainColor="@color/black"
+        app:zProgress="2"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
