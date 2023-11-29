@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyCircleProgress">
+        <!--        背景圆宽度-->
+        <attr name="bgPaintWidth" format="dimension" />
+        <attr name="bgPaintColor" format="color" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="progressColor" format="color" />
+        <attr name="valueTextColor" format="color" />
+        <attr name="valueTextSize" format="dimension" />
+        <attr name="messageTextColor" format="color" />
+        <attr name="messageTextSize" format="dimension" />
+        <attr name="unit" format="string"/>
+        <attr name="percent" format="float"/>
+        <attr name="message" format="string"/>
+        <attr name="startAngle" format="float"/>
+        <attr name="sweepAngle" format="float"/>
+        <attr name="maxValue" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="MyLineProgressBar">
+        <attr name="zMax" format="float"/>
+        <attr name="zProgress" format="float"/>
+        <attr name="zProgressColor" format="color"/>
+        <attr name="zRemainColor" format="color"/>
+        <attr name="zBarHeight" format="dimension"/>
+        <attr name="zTextColor" format="color"/>
+        <attr name="zTextVisibility" format="boolean"/>
+    </declare-styleable>
+
+</resources>

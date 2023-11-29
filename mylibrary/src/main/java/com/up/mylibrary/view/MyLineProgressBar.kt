@@ -1,6 +1,5 @@
-package com.up.dbcircleprogress.view
+package com.up.mylibrary.view
 
-import android.animation.ValueAnimator
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Canvas
@@ -9,9 +8,8 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
-import com.up.dbcircleprogress.R
+import com.up.mylibrary.R
 import java.text.DecimalFormat
-
 
 class MyLineProgressBar @JvmOverloads constructor(
     context: Context,
@@ -38,30 +36,30 @@ class MyLineProgressBar @JvmOverloads constructor(
     /**
      * 进度条最大值
      */
-    var mMax: Float = DEFAULT_MAX
+    private var mMax: Float = DEFAULT_MAX
     var mMin: Float = DEFAULT_PROGRESS
 
     /**
      * 进度条当前进度值
      */
-    var mProgress: Float = DEFAULT_PROGRESS
+    private var mProgress: Float = DEFAULT_PROGRESS
 
     /**
      * 进度条颜色
      * 完成
      */
-    var mProgressColor = DEFAULT_PROGRESS_COLOR
+    private var mProgressColor = DEFAULT_PROGRESS_COLOR
 
     /**
      * 进度条颜色
      * 剩余
      */
-    var mRemainColor = DEFAULT_REMAIN_COLOR
+    private var mRemainColor = DEFAULT_REMAIN_COLOR
 
     /**
      * 进度条高度
      */
-    var mBarHeight = 30f.dp
+    private var mBarHeight = 30f.dp
 
     /**
      * 剩余进度区域
@@ -127,7 +125,7 @@ class MyLineProgressBar @JvmOverloads constructor(
             //然后文字在最上层
             mPaint.textSize = mBarHeight * 0.5f
             //格式化Progress
-            var mCurrentDrawText: String = progressFormat.format(mProgress * 100 / mMax)
+            val mCurrentDrawText: String = progressFormat.format(mProgress * 100 / mMax)
             //画文字的基本操作，先测一下宽度
             val mDrawTextWidth = mPaint.measureText(mCurrentDrawText)
             //要判断下进度的宽度，够不够画文字出来
@@ -142,20 +140,6 @@ class MyLineProgressBar @JvmOverloads constructor(
                 )
             }
         }
-    }
-    fun setProgress( progress:Float){
-        mProgress =  progress
-        postInvalidate()
-    }
-    private fun drawOnAnimate(start: Float, end: Float) {
-        val valueAnimator = ValueAnimator.ofFloat(start, end)
-        valueAnimator.duration = 1000L
-        valueAnimator.addUpdateListener {
-            var progress = it.animatedValue as Float
-
-            postInvalidate()
-        }
-        valueAnimator.start()
     }
 
     /**

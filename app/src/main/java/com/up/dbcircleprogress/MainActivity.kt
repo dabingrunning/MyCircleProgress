@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.button_up).setOnClickListener {
-            findViewById<MyCircleProgress>(R.id.my_progress).setPercentValue(1f)
-            findViewById<MyLineProgressBar>(R.id.line_progress).setProgress(50f)
+            findViewById<MyCircleProgress>(R.id.my_progress).setPercentValue(51f)
+            findViewById<MyLineProgressBar>(R.id.line_progress).setProgress(100f)
         }
     }
 
